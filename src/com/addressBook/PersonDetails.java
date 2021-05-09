@@ -5,7 +5,8 @@ import java.util.Iterator;
 import java.util.List;
 
 public class PersonDetails {
-   /* public void operations() {
+
+    public void operations() {
         List<String> list1 = new ArrayList<String>();
         list1.add("Renuka");
         list1.add("Sawale");
@@ -19,5 +20,5 @@ public class PersonDetails {
         while (itr.hasNext()) {
             System.out.println(itr.next());
         }
-    }*/
+    }
 }
