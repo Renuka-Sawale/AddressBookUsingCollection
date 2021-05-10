@@ -42,6 +42,10 @@ public class AddressBook {
                 case 2:
                     addr.editContact();
                 break;
+
+                case 3:
+                    addr.deleteContact();
+                break;
             }
         } while (option !=0);
     }

@@ -50,4 +50,18 @@ public class Address {
         }
         System.out.println(list);
     }
+
+    public void deleteContact() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the name which you want to delete");
+        String name = sc.nextLine();
+        PersonDetails details = null;
+        for (int i= 0; i < list.size(); i++) {
+            details = list.get(i);
+            if (details.getFirstName().equals(name)) {
+                list.remove(i);
+            }
+            System.out.println(list);
+        }
+    }
 }
