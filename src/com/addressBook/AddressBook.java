@@ -13,30 +13,15 @@ public class AddressBook {
             System.out.println("1. Add Person Details");
             System.out.println("2. Edit the Details");
             System.out.println("3. Delete the Details");
+            System.out.println("4. Display the Details");
+            System.out.println("5. Display Person in State");
+            System.out.println("6. Search Person in City");
             System.out.println("0. Exit");
-            System.out.println("Choose proper input:");
+            System.out.println("Please Choose proper option:");
             option = sc.nextInt();
             switch (option) {
                 case 1:
-                    Scanner scan = new Scanner(System.in);
-                    System.out.println("Enter first name");
-                    String firstName = scan.nextLine();
-                    System.out.println("Enter last name");
-                    String lastName = scan.nextLine();
-                    System.out.println("Enter address");
-                    String address = scan.nextLine();
-                    System.out.println("Enter city");
-                    String city = scan.nextLine();
-                    System.out.println("Enter state");
-                    String state = scan.nextLine();
-                    System.out.println("Enter zip");
-                    String zip = scan.nextLine();
-                    System.out.println("Enter phoneNo");
-                    String phoneNo = scan.nextLine();
-                    System.out.println("Enter email");
-                    String email = scan.nextLine();
-                    PersonDetails persondetails = new PersonDetails(firstName, lastName, address, city, state, zip, phoneNo, email);
-                    addr.insertContact(persondetails);
+                   addr.insertContact();
                 break;
 
                 case 2:
@@ -45,6 +30,18 @@ public class AddressBook {
 
                 case 3:
                     addr.deleteContact();
+                break;
+
+                case 4:
+                    addr.display();
+                break;
+
+                case 5:
+                    addr.displayPersonInState();
+                break;
+
+                case 6:
+                    addr.searchPersonInCity();
                 break;
             }
         } while (option !=0);
